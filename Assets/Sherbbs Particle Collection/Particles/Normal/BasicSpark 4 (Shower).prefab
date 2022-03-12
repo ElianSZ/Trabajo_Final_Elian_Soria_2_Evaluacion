@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4184831819596093434}
   - component: {fileID: 4184831819596093432}
   - component: {fileID: 4184831819596093435}
+  - component: {fileID: 6032078949369439706}
   m_Layer: 0
   m_Name: LongSparks
   m_TagString: Untagged
@@ -4874,6 +4875,18 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &6032078949369439706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4184831819596093437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5640eab082756f489bb2b5c7950b165, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4184831820040277122
 GameObject:
   m_ObjectHideFlags: 0
@@ -4885,6 +4898,7 @@ GameObject:
   - component: {fileID: 4184831820040277121}
   - component: {fileID: 4184831820040277120}
   - component: {fileID: 4184831820040277123}
+  - component: {fileID: 1036797325322994013}
   m_Layer: 0
   m_Name: BasicSpark 4 (Shower)
   m_TagString: Untagged
@@ -9752,6 +9766,18 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &1036797325322994013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4184831820040277122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5640eab082756f489bb2b5c7950b165, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4184831820589792175
 GameObject:
   m_ObjectHideFlags: 0
@@ -9763,6 +9789,7 @@ GameObject:
   - component: {fileID: 4184831820589792172}
   - component: {fileID: 4184831820589792170}
   - component: {fileID: 4184831820589792173}
+  - component: {fileID: 5406412197874587355}
   m_Layer: 0
   m_Name: BouncingEmbers
   m_TagString: Untagged
@@ -14626,6 +14653,18 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &5406412197874587355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4184831820589792175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5640eab082756f489bb2b5c7950b165, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4184831820668467650
 GameObject:
   m_ObjectHideFlags: 0
@@ -14637,6 +14676,7 @@ GameObject:
   - component: {fileID: 4184831820668467651}
   - component: {fileID: 4184831820668467649}
   - component: {fileID: 4184831820668467648}
+  - component: {fileID: 5249844202611529916}
   m_Layer: 0
   m_Name: SpherePop
   m_TagString: Untagged
@@ -19500,6 +19540,18 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &5249844202611529916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4184831820668467650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5640eab082756f489bb2b5c7950b165, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6086168848883856455
 GameObject:
   m_ObjectHideFlags: 0
@@ -19511,6 +19563,7 @@ GameObject:
   - component: {fileID: 2963638368284630105}
   - component: {fileID: 4544442068816586066}
   - component: {fileID: 5168370799309812356}
+  - component: {fileID: 75995531105050694}
   m_Layer: 0
   m_Name: Point Light
   m_TagString: Untagged
@@ -19607,3 +19660,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionLight: {fileID: 6086168848883856455}
+--- !u!114 &75995531105050694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6086168848883856455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5640eab082756f489bb2b5c7950b165, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

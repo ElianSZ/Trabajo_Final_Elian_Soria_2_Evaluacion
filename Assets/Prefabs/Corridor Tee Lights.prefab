@@ -128,6 +128,7 @@ GameObject:
   - component: {fileID: 7903840661630526181}
   - component: {fileID: 7903840661633426115}
   - component: {fileID: 7903840661632425987}
+  - component: {fileID: 5578002909219447971}
   m_Layer: 0
   m_Name: Tunnel Beams002
   m_TagString: Untagged
@@ -198,6 +199,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &5578002909219447971
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7903840661630172869}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300006, guid: f31206e3aa5c5ba4ca098413529f39f7, type: 3}
 --- !u!1 &7903840661630172871
 GameObject:
   m_ObjectHideFlags: 0

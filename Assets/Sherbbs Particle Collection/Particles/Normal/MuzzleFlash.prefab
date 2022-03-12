@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7516004826788876447}
   - component: {fileID: 7516004826788876446}
   - component: {fileID: 7516004826788876441}
+  - component: {fileID: 4665141914078212289}
   m_Layer: 0
   m_Name: MuzzleFlash
   m_TagString: Untagged
@@ -4877,6 +4878,18 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &4665141914078212289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7516004826788876440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5640eab082756f489bb2b5c7950b165, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7516004827907615634
 GameObject:
   m_ObjectHideFlags: 0
@@ -4888,6 +4901,7 @@ GameObject:
   - component: {fileID: 7516004827907615635}
   - component: {fileID: 7516004827907615633}
   - component: {fileID: 7516004827907615632}
+  - component: {fileID: 6278392200225970860}
   m_Layer: 0
   m_Name: LeftSparks
   m_TagString: Untagged
@@ -9751,6 +9765,18 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &6278392200225970860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7516004827907615634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5640eab082756f489bb2b5c7950b165, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7516004828070340419
 GameObject:
   m_ObjectHideFlags: 0
@@ -9762,6 +9788,7 @@ GameObject:
   - component: {fileID: 7516004828070340416}
   - component: {fileID: 7516004828070340422}
   - component: {fileID: 7516004828070340417}
+  - component: {fileID: 2574943016795865485}
   m_Layer: 0
   m_Name: RightSparks
   m_TagString: Untagged
@@ -14625,6 +14652,18 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &2574943016795865485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7516004828070340419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5640eab082756f489bb2b5c7950b165, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7516004828754719017
 GameObject:
   m_ObjectHideFlags: 0
@@ -14636,6 +14675,7 @@ GameObject:
   - component: {fileID: 7516004828754719022}
   - component: {fileID: 7516004828754719020}
   - component: {fileID: 7516004828754719023}
+  - component: {fileID: 6069336602677583768}
   m_Layer: 0
   m_Name: FullSparks
   m_TagString: Untagged
@@ -19499,3 +19539,15 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &6069336602677583768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7516004828754719017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5640eab082756f489bb2b5c7950b165, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -17,23 +17,18 @@ public class DetectCollisions : MonoBehaviour
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
+    // Colisión de enemigos
     private void OnTriggerEnter(Collider otherTrigger)
     {
         if (otherTrigger.gameObject.CompareTag("Enemy"))
         {
             Destroy(otherTrigger.gameObject);
             Destroy(gameObject);
-            gameManager.kills = gameManager.kills + 1;
+
+            GameManager.instance.AddPoint();
 
             AudioSource.PlayClipAtPoint(explosionClip, transform.position, 1f);
             Instantiate(explosionParticleSystem, transform.position, transform.rotation);
-
-        }
-
-        if (otherTrigger.gameObject.CompareTag("Obstacle"))
-        {
-            Destroy(otherTrigger.gameObject);
-            Destroy(gameObject);
         }
     }
 }

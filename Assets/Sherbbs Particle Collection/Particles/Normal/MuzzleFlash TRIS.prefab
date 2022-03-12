@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7839935773408259890}
   - component: {fileID: 898198825697390366}
   - component: {fileID: 8738162408036029924}
+  - component: {fileID: 5000515125389619233}
   m_Layer: 0
   m_Name: MuzzleFlash BaseThicken
   m_TagString: Untagged
@@ -4874,6 +4875,18 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &5000515125389619233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 870096551138628750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5640eab082756f489bb2b5c7950b165, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3315550395074986093
 GameObject:
   m_ObjectHideFlags: 0
@@ -4885,6 +4898,7 @@ GameObject:
   - component: {fileID: 2303070229602913196}
   - component: {fileID: 998270586598129369}
   - component: {fileID: 5998523726804007684}
+  - component: {fileID: 5088606465096599684}
   m_Layer: 0
   m_Name: MuzzleFlash SmokeOnly
   m_TagString: Untagged
@@ -9748,6 +9762,18 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &5088606465096599684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3315550395074986093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5640eab082756f489bb2b5c7950b165, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8856629436882153003
 GameObject:
   m_ObjectHideFlags: 0
@@ -9759,6 +9785,7 @@ GameObject:
   - component: {fileID: 8856629436882153002}
   - component: {fileID: 8856629436882152996}
   - component: {fileID: 8856629436882152997}
+  - component: {fileID: 3664063095283733450}
   m_Layer: 0
   m_Name: SpherePop
   m_TagString: Untagged
@@ -14622,6 +14649,18 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &3664063095283733450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8856629436882153003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5640eab082756f489bb2b5c7950b165, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8856629437223374447
 GameObject:
   m_ObjectHideFlags: 0
@@ -14633,6 +14672,7 @@ GameObject:
   - component: {fileID: 8856629437223374446}
   - component: {fileID: 8856629437223374440}
   - component: {fileID: 8856629437223374441}
+  - component: {fileID: 8371499271023538254}
   m_Layer: 0
   m_Name: MuzzleFlash Outer
   m_TagString: Untagged
@@ -19496,6 +19536,18 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &8371499271023538254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8856629437223374447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5640eab082756f489bb2b5c7950b165, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8856629437242833163
 GameObject:
   m_ObjectHideFlags: 0
@@ -19507,6 +19559,7 @@ GameObject:
   - component: {fileID: 8856629437242833156}
   - component: {fileID: 8856629437242833157}
   - component: {fileID: 8856629437242833162}
+  - component: {fileID: 577735808426549190}
   m_Layer: 0
   m_Name: MuzzleFlash TRIS
   m_TagString: Untagged
@@ -24374,3 +24427,15 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &577735808426549190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8856629437242833163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5640eab082756f489bb2b5c7950b165, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -14,7 +14,6 @@ public class PlayerController : MonoBehaviour
     public float rot = 0f;
     public float deathSpeed = 0f;
 
-    // public float graviy = 0f;
     public Vector3 moveDir = Vector3.zero;
     private CharacterController controller;
     private Animator anim;
@@ -24,30 +23,24 @@ public class PlayerController : MonoBehaviour
     public GameObject shooter1;
     public GameObject shooter2;
     public GameObject explosions;
+    public GameObject shotLight;
+    public GameObject deathLight;
 
     public ParticleSystem explosionParticleSystem;
     public ParticleSystem explosionParticleSystem2;
     public ParticleSystem explosionParticleSystem3;
 
-    public int maxHealth = 100;
-    public int currentHealth;
-    public HealthBar healthBar;
-
-    //In the editor, add your wayPoint gameobject to the script.
     public GameObject wayPoint;
-    //This is how often your waypoint's position will update to the player's position
     private float timer = 0.5f;
 
     public bool isGameOver = false;
-    // public GameObject mech;
 
     private GameManager gameManager;
 
     private AudioSource playerAudioSource;
     public AudioClip shotClip;
 
-    public GameObject shotLight;
-    public GameObject deathLight;
+    public AudioClip explosionClip;
 
 
     private bool isCoroutineExecuting = false;
@@ -57,9 +50,6 @@ public class PlayerController : MonoBehaviour
         controller = GetComponent<CharacterController>();
         anim = GetComponent<Animator>();
         playerAudioSource = GetComponent<AudioSource>();
-
-        currentHealth = maxHealth;
-        healthBar.SetMaxHealth(maxHealth);
 
         gameManager = FindObjectOfType<GameManager>();
 
@@ -85,22 +75,6 @@ public class PlayerController : MonoBehaviour
             playerAudioSource.PlayOneShot(shotClip, 1f);
 
             StartCoroutine(ShotLightWaiter());
-        }
-
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            TakeDamage(25);
-        }
-
-        if (timer > 0)
-        {
-            timer -= Time.deltaTime;
-        }
-        if (timer <= 0)
-        {
-            //The position of the waypoint will update to the player's position
-            UpdatePosition();
-            timer = 0.5f;
         }
     }
 
@@ -146,12 +120,6 @@ public class PlayerController : MonoBehaviour
         controller.Move(moveDir * Time.deltaTime);
     }
 
-    void TakeDamage(int damage)
-    {
-        currentHealth -= damage;
-        healthBar.SetHealth(currentHealth);
-    }
-
     public void OnCollisionEnter(Collision otherCollider)
     {
         // Si colisiona con un obstacle, destruye ambos objetos
@@ -160,7 +128,10 @@ public class PlayerController : MonoBehaviour
             Instantiate(explosionParticleSystem2, explosions.transform.position, transform.rotation);
             Instantiate(explosionParticleSystem3, explosions.transform.position, transform.rotation);
 
+            AudioSource.PlayClipAtPoint(explosionClip, transform.position, 1f);
+
             PersistentData.sharedInstance.kills = gameManager.kills;
+            PersistentData.sharedInstance.highestScore = gameManager.highestScore;
 
             isGameOver = true;
             StartCoroutine(GameOverWaiter());
@@ -170,7 +141,7 @@ public class PlayerController : MonoBehaviour
 
     void UpdatePosition()
     {
-        //The wayPoint's position will now be the player's current position.
+        // La posición del jugador será la posición del waypoint
         wayPoint.transform.position = transform.position;
     }
 
@@ -182,16 +153,16 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSecondsRealtime(0.05f);
         deathLight.SetActive(false);
 
-        //Wait for 2 seconds
         yield return new WaitForSecondsRealtime(2);
-        SceneManager.LoadScene("3. Game Over");     // Carga la escena 3
+
+        // Carga la escena 3
+        SceneManager.LoadScene("3. Game Over");
 
         Time.timeScale = 1;
     }
 
     IEnumerator ShotLightWaiter()
     {
-        //Wait for 0.05 seconds
         yield return new WaitForSeconds(0.05f);
     }
 }

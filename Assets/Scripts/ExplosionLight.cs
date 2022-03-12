@@ -15,7 +15,6 @@ public class ExplosionLight : MonoBehaviour
 
     IEnumerator ExplosionLightWaiter()
     {
-        //Wait for 0.05 seconds
         yield return new WaitForSeconds(0.05f);
         explosionLight.SetActive(false);
     }

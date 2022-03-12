@@ -481,6 +481,7 @@ GameObject:
   - component: {fileID: 5041297064609190479}
   - component: {fileID: 5041297064612614767}
   - component: {fileID: 5041297064611614895}
+  - component: {fileID: 7247763050365865166}
   m_Layer: 0
   m_Name: Corridor Beams Wide
   m_TagString: Untagged
@@ -551,3 +552,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &7247763050365865166
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5041297064609681007}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300004, guid: 0c7a4f4b9bbf44841812ab47fae3b382, type: 3}

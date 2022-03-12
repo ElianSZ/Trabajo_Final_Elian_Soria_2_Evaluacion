@@ -1,30 +1,40 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    public int kills;
-    public TextMeshProUGUI killsText;
+    public static GameManager instance;
 
-    // Start is called before the first frame update
+    public TextMeshProUGUI killsText;
+    public TextMeshProUGUI highestScoreText;
+
+    public int kills = 0;
+    public int highestScore = 0;
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
     void Start()
     {
-        UpdateKills(0);
-        kills = 0;
+        highestScore = PlayerPrefs.GetInt("highestScore", 0);
+        killsText.text = kills.ToString() + " Kills";
+        highestScoreText.text = "High Score: " + highestScore.ToString();
     }
 
-    // Update is called once per frame
-    void Update()
+    // Actualizar el contador de muertes
+    public void AddPoint()
     {
-        killsText.text = $"Kills: {kills}";
-    }
+        kills += 1;
+        killsText.text = kills.ToString() + " Kills";
 
-    // Indica que los kills se actualizan con los puntos obtenidos
-    public void UpdateKills(int pointsToAdd)
-    {
-        kills += pointsToAdd;
-        killsText.text = $"Kills: {kills}";
+        if (highestScore < kills)
+        {
+            PlayerPrefs.SetInt("highestScore", kills);
+        }
     }
 }

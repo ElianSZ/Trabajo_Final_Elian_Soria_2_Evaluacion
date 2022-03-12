@@ -8,6 +8,7 @@ public class PersistentData : MonoBehaviour
 {
     public static PersistentData sharedInstance;
     public int kills;
+    public int highestScore;
 
     private void Awake()
     {

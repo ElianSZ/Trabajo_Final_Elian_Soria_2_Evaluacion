@@ -12,23 +12,26 @@ public class SpawnManager : MonoBehaviour
     private float spawnRate = 3f;
     private float startDelay = 3f;
 
-    // Start is called before the first frame update
+    public ParticleSystem spawnParticleSystem;
+    public GameObject particle;
+
     void Start()
     {
         playerController = FindObjectOfType<PlayerController>();
         StartCoroutine("spawnRandomTarget");
     }
 
-    // Controlador de spawnear los obstáculos
+    // Controlador de spawnear los enemigos
     private IEnumerator spawnRandomTarget()
     {
         while(!playerController.isGameOver)
         {
-        // Cada 3s se spawnea un obstáculo
+        // Cada 3s se spawnea un enemigo
         yield return new WaitForSeconds(spawnRate);
 
-        // Instancia los obstáculos
+        // Instancia los enemigos
         Instantiate(enemyPrefab, spawnPosition.transform.position, spawnPosition.transform.rotation);
+        Instantiate(spawnParticleSystem, particle.transform.position, transform.rotation);
         }
     }
 }

@@ -78,6 +78,7 @@ GameObject:
   - component: {fileID: 8756968192934524498}
   - component: {fileID: 8756968192937948786}
   - component: {fileID: 8756968192936817842}
+  - component: {fileID: 6963507213797980620}
   m_Layer: 0
   m_Name: Corridor Walls Wide002
   m_TagString: Untagged
@@ -148,6 +149,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &6963507213797980620
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8756968192934816370}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300008, guid: d01bf6e4f57c13044a7cd90f9da83dcb, type: 3}
 --- !u!1 &8756968192934816374
 GameObject:
   m_ObjectHideFlags: 0
@@ -321,6 +336,7 @@ GameObject:
   - component: {fileID: 8756968192934524506}
   - component: {fileID: 8756968192937948794}
   - component: {fileID: 8756968192936817850}
+  - component: {fileID: 2874671825840524186}
   m_Layer: 0
   m_Name: Corridor Beams Wide003
   m_TagString: Untagged
@@ -391,6 +407,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &2874671825840524186
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8756968192934816378}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: d01bf6e4f57c13044a7cd90f9da83dcb, type: 3}
 --- !u!1 &8756968192934816380
 GameObject:
   m_ObjectHideFlags: 0
