@@ -8,10 +8,11 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
     // private Vector3 initialPos = new Vector3(0, 100, 0);
-     public float speed = 4f;
-     public float runSpeed = 7f;
-     public float rotSpeed = 40f;
-     public float rot = 0f;
+    public float speed = 4f;
+    public float runSpeed = 7f;
+    public float rotSpeed = 40f;
+    public float rot = 0f;
+    public float deathSpeed = 0f;
 
     // public float graviy = 0f;
     public Vector3 moveDir = Vector3.zero;
@@ -22,10 +23,11 @@ public class PlayerController : MonoBehaviour
     public GameObject projectilePrefab2;
     public GameObject shooter1;
     public GameObject shooter2;
-    public GameObject explosion;
+    public GameObject explosions;
 
     public ParticleSystem explosionParticleSystem;
     public ParticleSystem explosionParticleSystem2;
+    public ParticleSystem explosionParticleSystem3;
 
     public int maxHealth = 100;
     public int currentHealth;
@@ -41,6 +43,12 @@ public class PlayerController : MonoBehaviour
 
     private GameManager gameManager;
 
+    private AudioSource playerAudioSource;
+    public AudioClip shotClip;
+
+    public GameObject shotLight;
+    public GameObject deathLight;
+
 
     private bool isCoroutineExecuting = false;
 
@@ -48,11 +56,15 @@ public class PlayerController : MonoBehaviour
     {
         controller = GetComponent<CharacterController>();
         anim = GetComponent<Animator>();
+        playerAudioSource = GetComponent<AudioSource>();
 
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
 
         gameManager = FindObjectOfType<GameManager>();
+
+        shotLight.SetActive(false);
+        deathLight.SetActive(false);
     }
 
     void Update()
@@ -70,7 +82,9 @@ public class PlayerController : MonoBehaviour
             Instantiate(explosionParticleSystem, shooter2.transform.position, transform.rotation);
 
             // Ejecuta una vez el audio de disparo
-            // playerAudioSource.PlayOneShot(shotClip, 1f);
+            playerAudioSource.PlayOneShot(shotClip, 1f);
+
+            StartCoroutine(ShotLightWaiter());
         }
 
         if (Input.GetKeyDown(KeyCode.Space))
@@ -143,15 +157,14 @@ public class PlayerController : MonoBehaviour
         // Si colisiona con un obstacle, destruye ambos objetos
         if (otherCollider.gameObject.CompareTag("Enemy"))
         {
-            // Destroy(otherCollider.gameObject);
-            // Destroy(gameObject);
+            Instantiate(explosionParticleSystem2, explosions.transform.position, transform.rotation);
+            Instantiate(explosionParticleSystem3, explosions.transform.position, transform.rotation);
 
-            // GameObject.Find("Player").transform.localScale = new Vector3(0, 0, 0);
-
-            Instantiate(explosionParticleSystem2, shooter1.transform.position, transform.rotation);
             PersistentData.sharedInstance.kills = gameManager.kills;
+
             isGameOver = true;
             StartCoroutine(GameOverWaiter());
+            Time.timeScale = 0;
         }
     }
 
@@ -164,8 +177,21 @@ public class PlayerController : MonoBehaviour
    
     IEnumerator GameOverWaiter()
     {
+        deathLight.SetActive(true);
+
+        yield return new WaitForSecondsRealtime(0.05f);
+        deathLight.SetActive(false);
+
         //Wait for 2 seconds
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSecondsRealtime(2);
         SceneManager.LoadScene("3. Game Over");     // Carga la escena 3
+
+        Time.timeScale = 1;
+    }
+
+    IEnumerator ShotLightWaiter()
+    {
+        //Wait for 0.05 seconds
+        yield return new WaitForSeconds(0.05f);
     }
 }
